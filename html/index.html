@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tweets</title>
+    <style>
+   body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#tweets-container {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 9999;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#twitter-logo {
+  width: 50px;
+  height: 50px;
+  background-image: url('https://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png');
+  background-size: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+#notification {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+.tweet {
+  background-color: #eee;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.tweet p {
+  margin: 0;
+}
+    </style>
+  </head>
+  
+  <body>
+    <div id="tweets-container">
+        <div id="twitter-logo"></div>
+        <div id="notification">Twotter Feed:</div>
+        <div id="tweets"></div>
+    <script>
+      function addTweet(message) {
+        if (filterMessage(message)) {
+  var tweetDiv = document.createElement("div");
+  tweetDiv.classList.add("tweet");
+  var messageP = document.createElement("p");
+  messageP.textContent = message;
+  tweetDiv.appendChild(messageP);
+  document.getElementById("tweets").appendChild(tweetDiv);
+  setTimeout(function() {
+    tweetDiv.remove();
+  }, 5000);
+}
+}
+function filterMessage(message) {
+        var badWords = ["faggot", "nigger", "nigga", "nig", "eulen", "cheater", "queer"];
+        
+        var messageLowerCase = message.toLowerCase();
+        
+        for (var i = 0; i < badWords.length; i++) {
+            if (messageLowerCase.includes(badWords[i])) {
+                return false;
+            }
+        }
+        
+        return true;
+    }
+
+      window.addEventListener("message", function(event) {
+        if (event.data.type === "new_tweet") {
+          addTweet(event.data.message);
+        }
+      });
+    </script>
+  </body>
+</html>
