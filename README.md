@@ -6,4 +6,4 @@ Download: https://github.com/KeziCodesSometimes/twotter or  [Direct Download](ht
 Preview: 
 ![image1|690x388](https://cdn.discordapp.com/attachments/1100500263858602116/1100594930117791844/image.png)
  (This picture is outdated the script shows the username infront of messages.)
- Discord: https://discord.gg/qP3rCzMCMH
+ Discord:  https://discord.gg/fivemdevelopment
