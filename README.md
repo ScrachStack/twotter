@@ -2,8 +2,8 @@
 
 
 
-Download: https://github.com/KeziCodesSometimes/twotter or  [Direct Download](https://github.com/KeziCodesSometimes/twotter/archive/refs/tags/1.zip)
+Download: https://github.com/Zaps6000/twotter or  [Direct Download](https://github.com/Zaps6000/twotter/archive/refs/tags/1.zip)
 Preview: 
 ![image1|690x388](https://cdn.discordapp.com/attachments/1100500263858602116/1100594930117791844/image.png)
  (This picture is outdated the script shows the username infront of messages.)
- Discord:  https://discord.gg/fivemdevelopment
+ Discord:  https://discord.gg/cfxdev
