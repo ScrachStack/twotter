@@ -2,8 +2,8 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'Kezi'
-description 'Twotter SYstem'
+author 'ScratchStack'
+description 'Twotter System 1.5.0'
 lua54 'yes'
 client_scripts {
 
@@ -19,3 +19,4 @@ files {
     "html/*.html"
   }
   ui_page 'html/index.html'
+shared_script '@ox_lib/init.lua'
